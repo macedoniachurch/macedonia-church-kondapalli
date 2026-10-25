@@ -1,0 +1,276 @@
+/* ============================================================
+   MACEDONIA CHURCH KONDAPALLI - ALL EDITABLE CONTENT
+   ------------------------------------------------------------
+   This is the ONLY file you need to edit for everyday updates:
+   service timings, events, sermons, year plan, contact details.
+
+   RULES (very important):
+   1. Keep the quote marks "like this" and the commas , at the end of lines.
+   2. Every text has two versions:  en: "English",  te: "తెలుగు"
+      If you leave te empty, English is shown for Telugu readers.
+   3. Dates are always written as  "YYYY-MM-DD"  (year-month-day).
+   For a event of several days add  endDate: "YYYY-MM-DD",  (last day).
+   4. Save the file, then refresh the website in your browser.
+   ============================================================ */
+
+window.CHURCH = {
+
+  /* ---------- BASIC INFORMATION ---------- */
+  name:    { en: "Macedonia Church, Kondapalli", te: "మాసిడోనియా చర్చ్ కొండపల్లి" },
+  tagline: { en: "A place to worship, grow and serve together",
+             te: "ఆరాధించడానికి, ఎదగడానికి, కలిసి సేవ చేయడానికి ఒక స్థలం" },
+
+  /* Put your logo file in  and make sure the name matches.
+     If the file is missing, a golden cross is shown instead. */
+  logo: "logo.png",
+
+  /* Optional big photo behind the top of the Home page. Leave "" for none.
+     Example: "hero.jpg" */
+  heroImage: "hero.jpg",
+
+  /* ---------- LIVE STREAM (the Watch Live button) ---------- */
+  liveUrl: "https://youtu.be/ibuSSPxzuUA",
+
+  /* ---------- HOME PAGE WELCOME ---------- */
+  welcome: {
+    en: "We warmly welcome you to Macedonia Church Kondapalli.",
+    te: "మాసిడోనియా చర్చ్ కొండపల్లికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము."
+  },
+  welcomeText: {
+    en: "We want every person to know Jesus Christ, grow in faith, and experience God's love through worship, fellowship and service.",
+    te: "ప్రతి వ్యక్తి యేసు క్రీస్తును తెలుసుకొని, విశ్వాసంలో ఎదిగి, ఆరాధన, సహవాసం మరియు సేవ ద్వారా దేవుని ప్రేమను అనుభవించాలని మేము కోరుకుంటున్నాము."
+  },
+
+  /* ---------- BIBLE VERSE ---------- */
+  verse: {
+    text: { en: "I can do all things through Christ who strengthens me.",
+            te: "నన్ను బలపరచు క్రీస్తు ద్వారా నేను సమస్తమును చేయగలను." },
+    ref:  { en: "Philippians 4:13", te: "ఫిలిప్పీయులకు 4:13" }
+  },
+
+  /* ---------- SERVICE TIMINGS ----------
+     To change a time, edit the "time" lines.
+     To add a service, copy one whole { ... }, block and change it. */
+  services: [
+    { name: { en: "Sunday Worship Service", te: "ఆదివారం ఆరాధన" },
+      day:  { en: "Every Sunday", te: "ప్రతి ఆదివారం" },
+      time: { en: "9:30 AM – 12:30 PM", te: "ఉదయం 9:30 – మధ్యాహ్నం 12:30" } },
+
+    { name: { en: "Sunday School", te: "సండే స్కూల్" },
+      day:  { en: "Every Sunday", te: "ప్రతి ఆదివారం" },
+      time: { en: "11:30 AM – 12:30 PM", te: "ఉదయం 11:30 – మధ్యాహ్నం 12:30" } },
+
+    { name: { en: "Youth Meeting", te: "యవనస్థుల కూడిక" },
+      day:  { en: "Every Sunday", te: "ప్రతి ఆదివారం" },
+      time: { en: "2:00 PM – 3:00 PM", te: "మధ్యాహ్నం 2:00 – 3:00" } }
+  ],
+
+  /* ---------- MINISTRIES ---------- */
+  ministries: [
+    { en: "Children's Ministries", te: "పిల్లల పరిచర్య" },
+    { en: "Youth Ministries",      te: "యువజన పరిచర్య" },
+    { en: "Women's Fellowship",    te: "మహిళల సహవాసం" }
+  ],
+
+  /* ---------- EVENTS ----------
+     Add a new event by copying one { ... }, block. Order does not matter:
+     the website puts upcoming events first and moves finished ones to "Past Events".
+     "image" is optional, e.g. "retreat.jpg" (or leave ""). */
+  events: [
+    { title: { en: "Family Retreat", te: "ఫ్యామిలీ రిట్రీట్" },
+      date: "2026-01-26",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "26th Anniversary", te: "26వ వార్షికోత్సవము" },
+      date: "2026-03-12",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Good Friday", te: "గుడ్ ఫ్రైడే" },
+      date: "2026-04-03",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Easter", te: "ఈస్టర్" },
+      date: "2026-04-05",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Youth Retreat", te: "యూత్ రిట్రీట్" },
+      date: "2026-06-26",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Fasting Prayers", te: "ఉపవాస ప్రార్థనలు" },
+      date: "2026-07-09",
+      endDate: "2026-07-11",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Church Retreat", te: "చర్చి రిట్రీట్" },
+      date: "2026-08-15",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Children's Retreat", te: "చిల్డ్రన్ రిట్రీట్" },
+      date: "2026-09-04",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Women's Conference", te: "స్త్రీల సదస్సు" },
+      date: "2026-10-02",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Bible Quiz", te: "బైబిల్ క్విజ్" },
+      date: "2026-11-15",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "Judges and Romans", te: "న్యాయాధిపతులు, రోమా పత్రిక" },
+      image: "" },
+
+    { title: { en: "Church Elders' Meeting", te: "సంఘపెద్దల సదస్సు" },
+      date: "2026-11-24",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Fasting Prayers", te: "ఉపవాస ప్రార్థనలు" },
+      date: "2026-12-10",
+      endDate: "2026-12-12",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Children & Youth Christmas", te: "చిల్డ్రన్ & యూత్ క్రిస్మస్" },
+      date: "2026-12-20",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Christmas", te: "క్రిస్మస్" },
+      date: "2026-12-24",
+      endDate: "2026-12-25",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Watchnight Service", te: "వాచ్నైట్ సర్వీస్" },
+      date: "2026-12-31",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" }
+  ],
+
+  /* ---------- SERMONS ----------
+     "id" is the part of a YouTube link after  watch?v=  or after  youtu.be/
+     Example: https://youtu.be/e2dNWK90Y2E  ->  id: "e2dNWK90Y2E"
+     Newest sermon first. title and date are optional (leave "" to hide). */
+  sermons: [
+    { id: "e2dNWK90Y2E", title: { en: "", te: "" }, date: "" },
+    { id: "OkL2DunAlk4", title: { en: "", te: "" }, date: "" }
+  ],
+  channelUrl: "https://youtu.be/TXDqoB7v7Ls",
+
+  /* ---------- CHURCH YEAR PLAN ---------- */
+  yearPlan: {
+    year: 2026,
+    intro: {
+      en: "Stay updated with our worship services, prayer meetings, Bible studies, fellowship programs and special church events.",
+      te: "మా ఆరాధనలు, ప్రార్థన కూడికలు, బైబిల్ అధ్యయనాలు, సహవాస కార్యక్రమాలు మరియు ప్రత్యేక సంఘ కార్యక్రమాల గురించి తెలుసుకోండి."
+    },
+    /* Pictures of the printed year plan. Put the files in 
+       with these names (add or remove lines as you like). Missing files are hidden. */
+    images: [
+      "year-plan-1.jpg",
+      "year-plan-2.jpg"
+    ],
+    
+    /* The month-by-month list below is built AUTOMATICALLY from "events" above.
+       You do not need to type anything here. */
+    months: []
+  },
+
+  /* ---------- CONTACT ---------- */
+  contact: {
+    address: { en: "Malkapurampeta, Kondapalli, NTR District, Ibrahimpatnam Mandal, Andhra Pradesh - 521228",
+               te: "మల్కాపురంపేట, కొండపల్లి, ఎన్.టి.ఆర్ జిల్లా, ఇబ్రహీంపట్నం మండలం, ఆంధ్రప్రదేశ్ - 521228" },
+    pastorLabel: { en: "Pastor", te: "పాస్టర్" },
+    pastor: "Muppidi Satyanartana Garu",   /* spelled exactly as on the old website - correct it here if needed */
+    mobile: "9490908480",
+    email: "",                     /* add an email here later if you want one shown */
+    mapLat: 16.613177,
+    mapLng: 80.540649
+  },
+
+  /* ---------- PHOTOS ON HOME PAGE (optional) ----------
+     Add photos like:  { src: "photo1.jpg", alt: { en: "Sunday worship", te: "ఆదివారం ఆరాధన" } },
+     Leave the list empty [] to hide the photo section. */
+  gallery: [
+  ],
+
+  /* ---------- EVENT PHOTO ALBUMS (links to Google Photos / Drive / Facebook albums) ----------
+     Add one { ... }, block for each album. "date" and "cover" are optional.
+     Change the title lines to the real event names.
+     Example:
+       { title: { en: "Christmas 2025", te: "క్రిస్మస్ 2025" },
+         date: "2025-12-25",
+         url: "https://photos.app.goo.gl/XXXXXXXX",
+         cover: "" },
+     While this list is empty, the Albums section is hidden. */
+  albums: [
+    { title: { en: "Photo Album 1", te: "ఫోటో ఆల్బమ్ 1" },
+      date: "",
+      url: "https://photos.app.goo.gl/YoSErb4XW3fTRmx69",
+      cover: "" },
+    { title: { en: "Photo Album 2", te: "ఫోటో ఆల్బమ్ 2" },
+      date: "",
+      url: "https://photos.app.goo.gl/seTUTXZM8MwS1zA87",
+      cover: "" },
+    { title: { en: "Photo Album 3", te: "ఫోటో ఆల్బమ్ 3" },
+      date: "",
+      url: "https://photos.app.goo.gl/2RSwbanZdfeP6W946",
+      cover: "" },
+    { title: { en: "Photo Album 4", te: "ఫోటో ఆల్బమ్ 4" },
+      date: "",
+      url: "https://photos.app.goo.gl/6Ct69a3Ptqk4BDua6",
+      cover: "" },
+    { title: { en: "Photo Album 5", te: "ఫోటో ఆల్బమ్ 5" },
+      date: "",
+      url: "https://photos.app.goo.gl/CCzQAfbXefuNTx2i7",
+      cover: "" },
+  ],
+
+  /* ---------- MENU ---------- */
+  nav: [
+    { id: "home",     href: "index.html",     label: { en: "Home",             te: "హోమ్" } },
+    { id: "sermons",  href: "sermons.html",   label: { en: "Sermons",          te: "ప్రసంగాలు" } },
+    { id: "events",   href: "events.html",    label: { en: "Events",           te: "కార్యక్రమాలు" } },
+    { id: "yearplan", href: "year-plan.html", label: { en: "Church Year Plan", te: "వార్షిక ప్రణాళిక" } },
+    { id: "contact",  href: "contact.html",   label: { en: "Contact Us",       te: "సంప్రదించండి" } }
+  ]
+};
