@@ -142,13 +142,23 @@
     mount("verse", "<blockquote>“" + L(C.verse.text) + "”<cite>" + L(C.verse.ref) + "</cite></blockquote>");
   }
 
+  function dateLine(ev, d) {
+    if (!ev.endDate) { return fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }); }
+    var e = parseDate(ev.endDate);
+    if (d.getMonth() === e.getMonth() && d.getFullYear() === e.getFullYear()) {
+      return fmt(d, { day: "numeric" }) + " – " + fmt(e, { day: "numeric", month: "long", year: "numeric" });
+    }
+    return fmt(d, { day: "numeric", month: "long" }) + " – " + fmt(e, { day: "numeric", month: "long", year: "numeric" });
+  }
+  function lastDay(ev) { return parseDate(ev.endDate || ev.date); }
+
   function eventHtml(ev, past) {
     var d = parseDate(ev.date);
     return '<article class="event' + (past ? " past" : "") + '">' +
-      '<div class="date-badge"><span class="d">' + fmt(d, { day: "numeric" }) + '</span><span class="m">' + fmt(d, { month: "short" }) + '</span><span class="y">' + d.getFullYear() + "</span></div>" +
+      '<div class="date-badge"><span class="d">' + (ev.endDate ? fmt(d, { day: "numeric" }) + "–" + fmt(parseDate(ev.endDate), { day: "numeric" }) : fmt(d, { day: "numeric" })) + '</span><span class="m">' + fmt(d, { month: "short" }) + '</span><span class="y">' + d.getFullYear() + "</span></div>" +
       '<div class="event-body"><h3>' + L(ev.title) + "</h3>" +
         '<ul class="event-meta">' +
-          "<li>📅 " + fmt(d, { weekday: "long", day: "numeric", month: "long", year: "numeric" }) + "</li>" +
+          "<li>📅 " + dateLine(ev, d) + "</li>" +
           (has(ev.time) ? "<li>🕙 " + L(ev.time) + "</li>" : "") +
           (has(ev.venue) ? "<li>📍 " + L(ev.venue) + "</li>" : "") +
         "</ul>" +
@@ -160,8 +170,8 @@
     var t = new Date(); t.setHours(0, 0, 0, 0);
     var all = C.events.slice().sort(function (a, b) { return parseDate(a.date) - parseDate(b.date); });
     return {
-      upcoming: all.filter(function (e) { return parseDate(e.date) >= t; }),
-      past: all.filter(function (e) { return parseDate(e.date) < t; }).reverse()
+      upcoming: all.filter(function (e) { return lastDay(e) >= t; }),
+      past: all.filter(function (e) { return lastDay(e) < t; }).reverse()
     };
   }
   var NO_EVENTS = '<div class="empty"><span data-l="en">No upcoming events right now. Please check back soon.</span><span data-l="te">ప్రస్తుతం రాబోయే కార్యక్రమాలు లేవు. దయచేసి మళ్లీ చూడండి.</span></div>';

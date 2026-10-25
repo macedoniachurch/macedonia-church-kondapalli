@@ -9,6 +9,7 @@
    2. Every text has two versions:  en: "English",  te: "తెలుగు"
       If you leave te empty, English is shown for Telugu readers.
    3. Dates are always written as  "YYYY-MM-DD"  (year-month-day).
+   For a event of several days add  endDate: "YYYY-MM-DD",  (last day).
    4. Save the file, then refresh the website in your browser.
    ============================================================ */
 
@@ -76,17 +77,47 @@ window.CHURCH = {
      the website puts upcoming events first and moves finished ones to "Past Events".
      "image" is optional, e.g. "retreat.jpg" (or leave ""). */
   events: [
-    { title: { en: "Children's Retreat", te: "పిల్లల రిట్రీట్" },
-      date: "2026-09-04",
-      time: { en: "10:00 AM", te: "ఉదయం 10:00" },
-      venue: { en: "Macedonia Church Kondapalli", te: "మాసిడోనియా చర్చ్ కొండపల్లి" },
+    { title: { en: "Bible Quiz", te: "బైబిల్ క్విజ్" },
+      date: "2026-11-15",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "Judges and Romans", te: "న్యాయాధిపతులు, రోమా పత్రిక" },
+      image: "" },
+
+    { title: { en: "Church Elders' Meeting", te: "సంఘపెద్దల సదస్సు" },
+      date: "2026-11-24",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
       description: { en: "", te: "" },
       image: "" },
 
-    { title: { en: "Women's Retreat", te: "మహిళల రిట్రీట్" },
-      date: "2026-10-02",
-      time: { en: "10:00 AM", te: "ఉదయం 10:00" },
-      venue: { en: "Macedonia Church Kondapalli", te: "మాసిడోనియా చర్చ్ కొండపల్లి" },
+    { title: { en: "Fasting Prayers", te: "ఉపవాస ప్రార్థనలు" },
+      date: "2026-12-10",
+      endDate: "2026-12-12",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Children & Youth Christmas", te: "చిల్డ్రన్ & యూత్ క్రిస్మస్" },
+      date: "2026-12-20",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Christmas", te: "క్రిస్మస్" },
+      date: "2026-12-24",
+      endDate: "2026-12-25",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
+      description: { en: "", te: "" },
+      image: "" },
+
+    { title: { en: "Watchnight Service", te: "వాచ్నైట్ సర్వీస్" },
+      date: "2026-12-31",
+      time: { en: "", te: "" },
+      venue: { en: "", te: "" },
       description: { en: "", te: "" },
       image: "" }
   ],
@@ -118,7 +149,15 @@ window.CHURCH = {
        Add lines inside "items" for each program of that month. */
     months: [
       { month: 9,  items: [ { day: 4, text: { en: "Children's Retreat", te: "పిల్లల రిట్రీట్" } } ] },
-      { month: 10, items: [ { day: 2, text: { en: "Women's Retreat",   te: "మహిళల రిట్రీట్" } } ] }
+      { month: 10, items: [ { day: 2, text: { en: "Women's Retreat",   te: "మహిళల రిట్రీట్" } } ] },
+      { month: 11, items: [
+          { day: 15, text: { en: "Bible Quiz (Judges, Romans)", te: "బైబిల్ క్విజ్ (న్యాయాధిపతులు, రోమా పత్రిక)" } },
+          { day: 24, text: { en: "Church Elders' Meeting",      te: "సంఘపెద్దల సదస్సు" } } ] },
+      { month: 12, items: [
+          { day: "10–12", text: { en: "Fasting Prayers",           te: "ఉపవాస ప్రార్థనలు" } },
+          { day: 20,      text: { en: "Children & Youth Christmas", te: "చిల్డ్రన్ & యూత్ క్రిస్మస్" } },
+          { day: "24–25", text: { en: "Christmas",                 te: "క్రిస్మస్" } },
+          { day: 31,      text: { en: "Watchnight Service",        te: "వాచ్నైట్ సర్వీస్" } } ] }
     ]
   },
 
